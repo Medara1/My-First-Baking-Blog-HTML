@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>My Current Baking Adventure</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+ 
+        <div class="header">
+            <h2>My Interesting Baking Adventure</h2>
+          </div>
+          
+        <br>
+        
+        <div class="button-container">
+            
+            <button id = "alert-button" class = "button">CLICK ME BEFORE YOU SCROLL</button>
+            
+        </div>
+          </br> 
+             
+        </section>
+
+
+
+          <div class="row">
+            <div class="leftcolumn">
+              <div class="card">
+                <h2>Info</h2>
+                <h5>April 25, 2022</h5>
+                <img src="https://practicallyhomemade.com/wp-content/uploads/2019/11/IMG_4774.jpg" alt= "Finished product of bars" style="height:400px;">
+                <p>For this assignment, I decided to actually do something real, and create a 
+                  website based off of what I did. What did I do exactly? Well I created White 
+                  Chocolate, Brown Sugar Bars, with a Cream Cheese Frosting. Delicious right?</p>
+              </div>
+              <div class="card">
+                <h2>My Steps</h2>
+                <h5>This is a personal recipe, not one borrowed</h5>
+                <img src="https://thesaltymarshmallow.com/wp-content/uploads/2019/11/easy-blondies-recipe-step-by-step.jpg" alt="Step by step process to making a simple blondie bar without white chocolate chips or cream cheese frosting" style="height:400px;">
+                <p>
+                  <ol>
+                      <li>Combine your dry ingredients in a seperate bowl</li>
+                      <li>Combine your sugars, butter, and flavouring in another bowl</li>
+                      <li>Add 2 eggs, one at a time, to the bowl of sugars and etc</li>
+                      <li>Slowly incorporate your bowl of mixed dry ingredients to your bowl of wet ingredients, whislt the mixer is running. DO THIS AT A LOW SPEED</li>
+                      <li>Using a spatula, mix your white chocolate chips into the batter. Do it slowly so you can make sure that you do not over-mix the batter</li>
+                      <li>Spoon the batter into your 9x9 baking pan. Make sure the pan has some protectant on it</li>
+                      <li>While the batter is in the oven for 20-23 minutes, in a seperate bowl, combine your unsalted butter and cream cheese until smooth/softer than a cloud</li>
+                      <li>Add in a small amount of vanilla flavouring</li>
+                      <li>Now that the bar pan is out of the oven, wait for it to cool down, then top it off with your frosting and extra white chocolate chips</li>
+                  </ol>
+                  
+                  </p>
+              </div>
+            </div>
+            <div class="rightcolumn">
+              <div class="card">
+                <h2>About Me And Baking</h2>
+                <img src="https://media.istockphoto.com/photos/afro-hispaniclatino-grandparents-teaching-her-granddaughter-how-to-picture-id1093755752?k=20&m=1093755752&s=612x612&w=0&h=qGHG0Z8ouXgHoT7dkcQ4u7YPHx8HU7SWx1syJKinveE=" alt= "A small girl baking with her grandmother" style="height:400px;">
+                <p>I love to bake, I have been baking since I was 4. First with my grandmother, then by myself. I find Baking really calming.</p>
+              </div>
+              <div class="card">
+                <h3>Some Other Things I Love to Bake</h3>
+                <img src="https://bakerbynature.com/wp-content/uploads/2016/04/untitled-44-of-50-1.jpg" alt="Caramel Cupcake with vanilla icing and a piece of caramel ontop" style="height:200px;" >
+                <img src="https://bake-eat-repeat.com/wp-content/uploads/2014/12/Soft-and-Chewy-Ginger-Cookies-2.jpg" alt="Ginger cookies sitting on a cooling rack" style="height:200px;" >
+                <img src="https://www.homemadeinterest.com/wp-content/uploads/2019/04/Coconut-Cake-Reshoot_IG-1-500x375.jpg" alt="A Coconut Cake with Icing covered in sweetened Coconut Shavings" style="height:200px;">
+              </div>
+              <div class="card">
+                <h3>What's Next?</h3>
+                <p>Some new adventures upcoming...</p>
+              </div>
+            </div>
+          </div>
+         
+          <!-- Quotes from my family -->
+        
+          <div class="slideshow-container">
+
+            <div class="mySlides">
+              <q>THE BEST BARS I'VE EVER HAD</q>
+              <p class="author">- Little Sister</p>
+            </div>
+          
+            <div class="mySlides">
+              <q>If only you could make this everyday</q>
+              <p class="author">- Little Brother</p>
+            </div>
+          
+            <div class="mySlides">
+              <q>Don't forget to clean up your dishes afterwards</q>
+              <p class="author">- Mother</p>
+            </div>
+          
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          
+          
+          <div class="dot-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+
+
+
+
+          <div class="footer">
+            <h2>I hope you enjoyed</h2>
+          
+          </div>
+
+          
+          
+          
+          
+          
+          <script>
+            
+            
+    
+            
+            $("#alert-button").on("click", function(){
+                alert("Prepare yourself for epicness");
+            });
+            
+            
+            
+            
+            
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+            }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+            }
+             
+                    
+        </script>
+
+
+
+
+
+
+
+    </body>
